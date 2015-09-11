@@ -1,17 +1,51 @@
 <!DOCTYPE html>
-<head>
-    <script src="/scripts/scripts.js"></script>
-    <title>Noughts and Crosses</title>
-</head>
-<body>
-    <img src="images/elephant.jpg">
-    <audio controls loop>
-        <source src="sounds/elephantSound.mp3" type="audio/mpeg">
-    </audio>
-    <img src="images/tiger.jpeg">
-    <audio controls loop>
-        <source src="sounds/tigerSound.mp3" type="audio/mpeg">
-    </audio>
+<html ng-app="Tombola.MyModule">
+    <head>
 
-</body>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="../../thirdparty/bower_components/angular/angular.min.js"></script>
+        <title>Noughts and Crosses</title>
+    </head>
+
+    <body ng-controller="MyController">
+        <h1>{{message}}</h1>
+        <div>
+            <input type="text" ng-model="message">
+        </div><br />
+
+        <h1>Player 1: {{player1}}</h1>
+        <h1>Player 2: {{player2}}</h1>
+        <br/>
+        <select ng-model="player1">
+            <option value="Human">Human</option>
+            <option value="Random">Random</option>
+            <option value="Pre-trained">Pre-Trained</option>
+        </select>
+        <select ng-model="player2">
+            <option value="Human">Human</option>
+            <option value="Random">Random</option>
+            <option value="Pre-trained">Pre-Trained</option>
+        </select>
+        <br />
+        <h2>Game Progress: {{gameboard}}</h2>
+
+        <img class="players" src="images/elephant.jpg">
+        <img class="players" src="images/tiger.png">
+
+
+        <div class="container">
+            <div class="square" ng-click="gameplay(0)"></div>
+            <div class="square" ng-click="gameplay(1)"></div>
+            <div class="square" ng-click="gameplay(2)"></div>
+            <div class="square" ng-click="gameplay(3)"></div>
+            <div class="square" ng-click="gameplay(4)"></div>
+            <div class="square" ng-click="gameplay(5)"></div>
+            <div class="square" ng-click="gameplay(6)"></div>
+            <div class="square" ng-click="gameplay(7)"></div>
+            <div class="square" ng-click="gameplay(8)"></div>
+        </div>
+
+
+        <script src="scripts/app.js"></script>
+    </body>
 </html>

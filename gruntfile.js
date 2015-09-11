@@ -29,5 +29,4 @@
         grunt.registerTask('htmlFiles',['clean:html', 'copy:html']);
         grunt.registerTask('default', ['copy', 'lessFiles', 'jsFiles', 'watch']);
     };
-
 })();
