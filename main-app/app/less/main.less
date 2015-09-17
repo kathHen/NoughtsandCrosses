@@ -5,6 +5,13 @@
 body {
   background-color: @background-color;
   color: #FFFFFF;
+  font-family: sans-serif;
+}
+
+.mainContainer {
+  width: 900px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .square{
@@ -12,17 +19,87 @@ body {
   width:148px;
   float:left;
   display:block;
+  padding-bottom: 5px;
 }
 
 .square {
-  border:1px solid #FFF;
+  //border:1px solid #FFF;
   padding-bottom: 30%;
 }
 
 .container {
   width: 450px;
   height: 450px;
+  margin: 0 auto;
+
 }
-.players {
-   width:145px;
- }
+.players1, .players2 {
+  display: inline-block;
+  background: url('../images/gamesprite.png') no-repeat;
+  overflow: hidden;
+}
+
+.players1 {
+  background-position: -0 -0;
+  width: 148px;
+  height: 135px;
+}
+
+.players2 {
+  background-position: -0 -148px;
+  width: 148px;
+  height: 135px;
+}
+
+.menupicker, .menupicker span {
+  height: 148px;
+}
+
+.Human, .Pre-trained, .Random {
+  display: inline-block;
+  background: url('../images/playerSelection.png') no-repeat;
+  }
+
+.Human {
+  background-position: -0 -0;
+  width: 148px;
+  height: 148px;
+}
+
+.Pre-trained {
+  background-position: -0 -148px;
+  width: 148px;
+  height: 148px;
+}
+
+.Random {
+  background-position: -0 -296px;
+  width: 148px;
+  height: 148px;
+}
+
+
+//.human {
+//  height: 148px;
+//  width: 148px;
+//  background-image: url('../images/player-selection-sprite.png');
+//  background-size: 444px 148px;
+//  background-position: 0 0;
+//  &.random{
+//    background-position: -148px 0;
+//  };
+//  &.pretrained{
+//    background-position: -296px 0;
+//  };
+//}
+
+
+.rowBorder {
+  border-top: 1px dotted #fff;
+  border-bottom: 1px dotted #fff;
+}
+
+.colBorder {
+  border-left: 1px dotted #fff;
+  border-right: 1px dotted #fff;
+}

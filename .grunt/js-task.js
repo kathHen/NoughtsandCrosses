@@ -9,7 +9,7 @@
         },
         concatJS: {
             cwd: '',
-            src: 'main-app/app/scripts/**/*.js',
+            src: 'main-app/app/scripts/script.js',
             dest: '.build/main-app/app/scripts',
             expand: false
         }

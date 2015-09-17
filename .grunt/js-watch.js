@@ -6,7 +6,7 @@
             tasks: ['lessFiles']
         },
         jsWatch: {
-            files: ['main-app/app/scripts/*.js'],
+            files: ['main-app/app/scripts/**/*.js'],
             tasks: ['jsFiles']
         },
         htmlWatch: {

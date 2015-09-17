@@ -8,43 +8,54 @@
     </head>
 
     <body ng-controller="MyController">
-        <h1>{{message}}</h1>
-        <div>
-            <input type="text" ng-model="message">
-        </div><br />
+        <div class="mainContainer">
+            <h1>{{message}}</h1>
+            <!--<div>
+                <input type="text" ng-model="message">
+            </div><br />-->
+            <div ng-hide="showGame">
+                <div ng-click="characterSelection(1)" class="{{player1}}">
+                   <!--<img class="playerSelection" src="images/blank.png">-->
+                </div>
 
-        <h1>Player 1: {{player1}}</h1>
-        <h1>Player 2: {{player2}}</h1>
-        <br/>
-        <select ng-model="player1">
-            <option value="Human">Human</option>
-            <option value="Random">Random</option>
-            <option value="Pre-trained">Pre-Trained</option>
-        </select>
-        <select ng-model="player2">
-            <option value="Human">Human</option>
-            <option value="Random">Random</option>
-            <option value="Pre-trained">Pre-Trained</option>
-        </select>
-        <br />
-        <h2>Game Progress: {{gameboard}}</h2>
+                <div ng-click="characterSelection(2)" class="{{player2}}">
+                    <!--<img class="playerSelection" src="images/blank.png">-->
+                </div>
+                <br/>
+                <select ng-model="player1">
+                    <option value="Human">Human</option>
+                    <option value="Random">Random</option>
+                    <option value="Pre-trained">Pre-Trained</option>
+                </select>
+                <select ng-model="player2">
+                    <option value="Human">Human</option>
+                    <option value="Random">Random</option>
+                    <option value="Pre-trained">Pre-Trained</option>
+                </select>
 
-        <img class="players" src="images/elephant.jpg">
-        <img class="players" src="images/tiger.png">
+            <p>
+                <!--<button>Show Game</button>-->
+            <button ng-click="newGameMaker()">New Game</button>
+            </div>
+            <button ng-show="showGame" ng-click="gameReset()">Reset Game</button>
+            <h3 ng-show="showGame">Game Progress: {{gameboard}}</h3>
+            <h3 ng-show="showGame">{{gameState}}</h3>
+            <!--<h3>The Winner is {{gameWinner}}</h3><-->
+            <br>
 
-
-        <div class="container">
-            <div class="square" ng-click="gameplay(0)"></div>
-            <div class="square" ng-click="gameplay(1)"></div>
-            <div class="square" ng-click="gameplay(2)"></div>
-            <div class="square" ng-click="gameplay(3)"></div>
-            <div class="square" ng-click="gameplay(4)"></div>
-            <div class="square" ng-click="gameplay(5)"></div>
-            <div class="square" ng-click="gameplay(6)"></div>
-            <div class="square" ng-click="gameplay(7)"></div>
-            <div class="square" ng-click="gameplay(8)"></div>
+            <div ng-show="showGame" class="container">
+                <div class="square" ng-click="gameplay(0)"><img src="images/blank.png" class="players{{gameboard[0]}}"></div>
+                <div class="square colBorder" ng-click="gameplay(1)"><img src="images/blank.png" class="players{{gameboard[1]}}"></div>
+                <div class="square" ng-click="gameplay(2)"><img src="images/blank.png" class="players{{gameboard[2]}}"></div>
+                <div class="square rowBorder" ng-click="gameplay(3)"><img src="images/blank.png" class="players{{gameboard[3]}}"></div>
+                <div class="square rowBorder colBorder" ng-click="gameplay(4)"><img src="images/blank.png" class="players{{gameboard[4]}}"></div>
+                <div class="square rowBorder" ng-click="gameplay(5)"><img src="images/blank.png" class="players{{gameboard[5]}}"></div>
+                <div class="square" ng-click="gameplay(6)"><img src="images/blank.png" class="players{{gameboard[6]}}"></div>
+                <div class="square colBorder" ng-click="gameplay(7)"><img src="images/blank.png" class="players{{gameboard[7]}}"></div>
+                <div class="square" ng-click="gameplay(8)"><img src="images/blank.png" class="players{{gameboard[8]}}"></div>
+            </div>
+            <br>
         </div>
-
 
         <script src="scripts/app.js"></script>
     </body>
