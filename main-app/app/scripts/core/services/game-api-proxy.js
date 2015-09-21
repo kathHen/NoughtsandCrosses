@@ -1,9 +1,7 @@
 (function(){
     'use strict';
-    angular.module('Tombola.MyModule.gameplayApi', [])
-
-        .service('GameapiStuff', ['$http', '$q', function($http, $q) {
-
+    angular.module('Tombola.NoughtsandCrosses.Core', [])
+        .service('GameApiProxy', ['$http', '$q', function($http, $q) {
             var callGameService = function (action, data){
                 var deferred = $q.defer();
                 $http.post('http://eutaveg-01.tombola.emea:35000/api/v1.0/' + action,
@@ -27,8 +25,5 @@
                 return callGameService('makemove', {"playerNumber": currentPlayer, "chosenSquare": gridNumberIndex});
                 }
             };
-
-
-
     }]);
 })();
