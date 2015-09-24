@@ -12,10 +12,7 @@
                 .state('gameplayInProgress', {
                     url: '/gameplay',
                     templateUrl: 'html/gameplay.html'
-                    //controller: 'MyController'
                 });
         });
-    //.controller('MyController', ['$scope', function($scope){
-    //    $scope.myValue = "Whats up?";
-    //}]);
+
 })();

@@ -1,6 +1,6 @@
 (function(){
     'use strict';
-    angular.module('Tombola.NoughtsandCrosses.Core', [])
+    angular.module('Tombola.NoughtsandCrosses.Core')
         .service('GameApiProxy', ['$http', '$q', function($http, $q) {
             var callGameService = function (action, data){
                 var deferred = $q.defer();

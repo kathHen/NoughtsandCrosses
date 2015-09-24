@@ -6,7 +6,7 @@
         jsConcat = require('./.grunt/js-concat'),
         jsClean = require('./.grunt/js-clean'),
         jsWatch = require('./.grunt/js-watch')
-    module.exports = function(grunt){
+    module.exports = function (grunt) {
         grunt.initConfig({
             pkg: grunt.file.readJSON('package.json'),
             copy: copyTask,
@@ -17,6 +17,7 @@
             clean: jsClean,
             watch: jsWatch
         });
+
         grunt.loadNpmTasks('grunt-contrib-copy');
         grunt.loadNpmTasks('grunt-lesslint');
         grunt.loadNpmTasks('grunt-contrib-less');
@@ -24,9 +25,19 @@
         grunt.loadNpmTasks('grunt-contrib-concat');
         grunt.loadNpmTasks('grunt-contrib-clean');
         grunt.loadNpmTasks('grunt-contrib-watch');
+        grunt.loadNpmTasks('grunt-express-server');
+
+        var port = 35001;
+        grunt.registerTask('server', 'Start a custom web server', function () {
+            var server = require('./server/serverfile.js');
+            server.listen(port);
+            grunt.log.writeln('Listening on port ' + port);
+        });
+
         grunt.registerTask('lessFiles', ['lesslint', 'clean:css', 'less']);
         grunt.registerTask('jsFiles', ['jshint', 'clean:javascript', 'concat']);
-        grunt.registerTask('htmlFiles',['clean:html', 'copy:html']);
-        grunt.registerTask('default', ['copy', 'lessFiles', 'jsFiles', 'watch']);
-    };
+        grunt.registerTask('htmlFiles', ['clean:html', 'copy:html']);
+        grunt.registerTask('default', ['copy', 'lessFiles', 'jsFiles', 'server', 'watch']);
+
+    }
 })();

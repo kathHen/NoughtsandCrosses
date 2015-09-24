@@ -1,20 +1,20 @@
 (function(){
-    'use strict';
-    angular.module('Tombola.NoughtsandCrosses')
-        .controller('MainController', ['$scope', 'Game', function ($scope, game) {
+        'use strict';
+        angular.module('Tombola.NoughtsandCrosses')
+            .controller('MainController', ['$scope', 'Game', function ($scope, game) {
 
-            $scope.gameplay = function(gridNumberIndex) {
-                game.gameplay(gridNumberIndex);
-            };
+                $scope.humangameplay = function(gridNumberIndex) {
+                    game.humangameplay(gridNumberIndex);
+                };
 
-            $scope.newGameMaker = function(){
-                  game.startNewGame();
-            };
+                $scope.newGameMaker = function(){
+                    game.startNewGame();
+                };
 
-            $scope.makingMoves = function(gridNumber){
-                game.makingMoves(gridNumber);
-            };
+                $scope.makingMoves = function(gridNumber){
+                    game.makingMoves(gridNumber);
+                };
 
-        }]);
+            }]);
 
 })();
