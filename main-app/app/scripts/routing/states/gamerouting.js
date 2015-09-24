@@ -12,7 +12,11 @@
                 .state('gameplayInProgress', {
                     url: '/gameplay',
                     templateUrl: 'html/gameplay.html'
-                });
+                })
+            .state('gamerules', {
+                url: '/gamerules',
+                templateUrl: 'html/gamerules.html'
+            });
         });
 
 })();

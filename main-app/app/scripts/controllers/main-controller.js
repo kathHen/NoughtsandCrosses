@@ -15,6 +15,8 @@
                     game.makingMoves(gridNumber);
                 };
 
+
+
             }]);
 
 })();

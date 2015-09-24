@@ -1,25 +1,14 @@
 (function() {
     'use strict';
     angular.module('Tombola.NoughtsandCrosses.Game')
-        .service ('Game', ['CharacterSelection', 'GameApiProxy', function(characterSelection, gameApiProxy)  {
-        var me = this,
-            currentPlayer = 1;
-        me.gameboard = '000000000';
-        me.gameState = '';
-
-
-        //var setCharAt = function (string, index, character) {
-        //    return string.substr(0,index) + character + string.substr(index+1);
-        //};
+        .service ('Game', ['CharacterSelection', 'GameApiProxy', 'GameModel', function(characterSelection, gameApiProxy, GameModel)  {
+        var me = this;
+        me.gameModel = GameModel;
 
         me.startNewGame = function(){
             gameApiProxy.makeNewGame(characterSelection.player1, characterSelection.player2)
                 .then(function (response){
-                    currentPlayer = 1;
-                    me.gameState = response.outcome;
-                    me.gameboard = response.gameboard;
-                    me.winner = response.winner;
-
+                    GameModel.startNewGame(response.gameboard, response.outcome, response.winner);
 
                 }).catch(function(response){
                     console.log("This is the error response: " + response);
@@ -27,16 +16,16 @@
         };
 
         me.makingMoves = function(gridNumber){
-            gameApiProxy.makeMoveinGame(currentPlayer, gridNumber)
+            gameApiProxy.makeMoveinGame(GameModel.currentPlayer, gridNumber)
                 .then(function (response){
-
-                    me.gameboard = response.gameboard;
-                    me.gameState = response.outcome;
-                    me.winner = response.winner;
-
+                    GameModel.makingGameMove(response.gameboard, response.outcome, response.winner);
                     console.log(response.outcome);
+                    me.drawOutcome = function(){
 
-
+                    if (response.winner === 0){
+                         GameModel.winner = 'Draw';
+                    }
+                }();
                 }).catch (function(response){
                 console.log("This is the error response " + response);
             });
@@ -44,19 +33,13 @@
         };
 
         me.humangameplay = function(gridNumberIndex){
-            //if (me.gameboard.charAt(gridNumberIndex) != '0' || me.gameState === "Win"){
-            //    return;
-            //}
-            //me.gameboard = setCharAt(me.gameboard, gridNumberIndex, currentPlayer);
-            if (characterSelection.player1 !== 'Human'){
-                currentPlayer = 2;
-
+            if (GameModel.gameboard.charAt(gridNumberIndex) != '0' || GameModel.gameState === "Win"){
+                return;
             }
             me.makingMoves(gridNumberIndex);
-            if (characterSelection.player1 === "Human" && characterSelection.player2 === "Human"){
-                currentPlayer = currentPlayer === 1 ? 2 : 1;
-            }
         };
+
+
 
     }]);
 })();
