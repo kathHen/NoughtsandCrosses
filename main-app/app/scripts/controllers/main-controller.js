@@ -1,7 +1,7 @@
 (function(){
         'use strict';
         angular.module('Tombola.NoughtsandCrosses')
-            .controller('MainController', ['$scope', 'Game', function ($scope, game) {
+            .controller('MainController', ['$scope', 'Game', 'GameModel', function ($scope, game, gameModel) {
 
                 $scope.humangameplay = function(gridNumberIndex) {
                     game.humangameplay(gridNumberIndex);
@@ -15,7 +15,7 @@
                     game.makingMoves(gridNumber);
                 };
 
-
+                $scope.gameModel = gameModel;
 
             }]);
 
