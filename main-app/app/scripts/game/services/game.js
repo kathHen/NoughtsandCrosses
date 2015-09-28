@@ -1,7 +1,8 @@
 (function() {
     'use strict';
     angular.module('Tombola.NoughtsandCrosses.Game')
-        .service ('Game', ['CharacterSelection', 'GameApiProxy', 'GameModel', function(characterSelection, gameApiProxy, GameModel)  {
+        .service ('Game', ['CharacterSelection', 'GameApiProxy', 'GameModel', 'Endgame',
+        function(characterSelection, gameApiProxy, GameModel, Endgame)  {
         var me = this;
         me.gameModel = GameModel;
 
@@ -9,6 +10,7 @@
             gameApiProxy.makeNewGame(characterSelection.player1, characterSelection.player2)
                 .then(function (response){
                     GameModel.startNewGame(response.gameboard, response.outcome, response.winner);
+                    Endgame.checkingEndGame();
 
                 }).catch(function(response){
                     console.log("This is the error response: " + response);
@@ -20,12 +22,8 @@
                 .then(function (response){
                     GameModel.makingGameMove(response.gameboard, response.outcome, response.winner);
                     console.log(response.outcome);
-                    me.drawOutcome = function(){
+                    Endgame.checkingEndGame();
 
-                    if (response.winner === 0){
-                         GameModel.winner = 'Draw';
-                    }
-                }();
                 }).catch (function(response){
                 console.log("This is the error response " + response);
             });
