@@ -9,16 +9,10 @@
         me.gameState = '';
         me.outcome = '';
 
-
         me.updateCurrentGameModel = function (gameboard, outcome, winner){
             me.gameboard = gameboard;
             me.gameState = outcome;
             me.outcome = winner;
-
-            //Endgame.checkingEndGame();
-            //if (me.gameState === 'Draw'){
-            //    $state.go('drawgame');
-            //}
         };
 
         me.startNewGame = function(gameboard, outcome, winner){
@@ -27,15 +21,11 @@
                 me.currentPlayer = 2;
             }
             me.updateCurrentGameModel(gameboard, outcome, winner);
-            //Endgame.checkingEndGame();
-
         };
 
         me.makingGameMove = function(gameboard, outcome, winner){
             me.updateCurrentGameModel(gameboard, outcome, winner);
             me.currentPlayerLogic();
-            //Endgame.checkingEndGame();
-
         };
 
         me.currentPlayerLogic = function(){
@@ -44,6 +34,7 @@
                 me.currentPlayer = me.currentPlayer === 1 ? 2 : 1;
             }
         };
+
 
 
     }]);

@@ -22,10 +22,10 @@
                     //controller: 'MainController',
                     templateUrl: 'html/draw.html'
                 })
-                .state('winner1', {
-                    url: '/winner1',
+                .state('winner', {
+                    url: '/winner',
                     //controller: 'MainController',
-                    templateUrl: 'html/winplayer1.html'
+                    templateUrl: 'html/winplayer.html'
                 })
                 .state('winner2', {
                     url: '/winner2',

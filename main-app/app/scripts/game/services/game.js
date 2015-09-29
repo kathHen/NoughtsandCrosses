@@ -10,7 +10,7 @@
             gameApiProxy.makeNewGame(characterSelection.player1, characterSelection.player2)
                 .then(function (response){
                     GameModel.startNewGame(response.gameboard, response.outcome, response.winner);
-                    Endgame.checkingEndGame();
+                    //Endgame.checkingGamewithTime();
 
                 }).catch(function(response){
                     console.log("This is the error response: " + response);
@@ -22,7 +22,7 @@
                 .then(function (response){
                     GameModel.makingGameMove(response.gameboard, response.outcome, response.winner);
                     console.log(response.outcome);
-                    Endgame.checkingEndGame();
+                    //Endgame.checkingGamewithTime();
 
                 }).catch (function(response){
                 console.log("This is the error response " + response);
@@ -35,6 +35,7 @@
                 return;
             }
             me.makingMoves(gridNumberIndex);
+            Endgame.checkingGamewithTime();
         };
 
 

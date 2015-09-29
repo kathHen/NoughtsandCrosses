@@ -1,10 +1,8 @@
 @background-color: #242425 ;
-@link-color: #7B900F  ;
-@link-lowlight-color: #7F7F7F  ;
 
 body {
   background-color: @background-color;
-  color: #b00b53;
+  color: #1a90d9;
   font-family: sans-serif;
 }
 
@@ -39,7 +37,7 @@ body {
 }
 .players1, .players2 {
   display: inline-block;
-  background: url('../images/gamesprite.png') no-repeat;
+  background: url('../images/mainplayers.png') no-repeat;
   overflow: hidden;
 }
 
@@ -61,7 +59,7 @@ body {
 
 .Human, .Pre-trained, .Random {
   display: inline-block;
-  background: url('../images/playerSelection.png') no-repeat;
+  background: url('../images/playerselectioncard.png') no-repeat;
   }
 
 .Human {
@@ -114,13 +112,13 @@ body {
   border-radius: 28px;
   color: #ffffff;
   font-size: 12px;
-  background: #b00b53;
+  background: #1a90d9;
   padding: 5px 15px 5px 15px;
   text-decoration: none;
 }
 
 .button:hover {
-  background: #db3d84;
+  background: #d31e1e;
   text-decoration: none;
 }
 
@@ -131,4 +129,43 @@ body {
 
 b {
   color: white;
+}
+
+h1 {
+  color: #d31e1e;
+}
+
+.blink_me {
+  -webkit-animation-name: blinker;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+
+  -moz-animation-name: blinker;
+  -moz-animation-duration: 1s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+
+  animation-name: blinker;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@keyframes blinker {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
 }

@@ -9,12 +9,12 @@
 
                 $scope.newGameMaker = function(){
                     game.startNewGame();
-                    Endgame.checkingEndGame();
+                    Endgame.checkingGamewithTime();
                 };
 
                 $scope.makingMoves = function(gridNumber){
                     game.makingMoves(gridNumber);
-                    Endgame.checkingEndGame();
+                    Endgame.checkingGamewithTime();
                 };
 
                 //$scope.gameModel = GameModel;
