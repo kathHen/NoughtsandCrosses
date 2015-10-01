@@ -1,0 +1,149 @@
+body {
+  background-color: #eaeaea;
+  color: #0e7f05;
+  font-family: sans-serif;
+}
+.mainContainer {
+  width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.square {
+  height: 0;
+  width: 148px;
+  float: left;
+  display: block;
+  padding-bottom: 5px;
+}
+.square {
+  padding-bottom: 30%;
+}
+.container {
+  width: 450px;
+  height: 450px;
+  margin: 0 auto;
+}
+.players1,
+.players2 {
+  display: inline-block;
+  background: url('../images/xandos.png') no-repeat;
+  overflow: hidden;
+}
+.players1 {
+  background-position: 0 0;
+  width: 148px;
+  height: 135px;
+}
+.players2 {
+  background-position: 0 -148px;
+  width: 148px;
+  height: 135px;
+}
+.menupicker,
+.menupicker span {
+  height: 148px;
+}
+.Human,
+.Pre-trained,
+.Random {
+  display: inline-block;
+  background: url('../images/greensprite.png') no-repeat;
+}
+.Human {
+  background-position: 0 0;
+  width: 148px;
+  height: 148px;
+}
+.Pre-trained {
+  background-position: 0 -148px;
+  width: 148px;
+  height: 148px;
+}
+.Random {
+  background-position: 0 -296px;
+  width: 148px;
+  height: 148px;
+}
+.rowBorder {
+  border-top: 1px dotted #fff;
+  border-bottom: 1px dotted #fff;
+}
+.colBorder {
+  border-left: 1px dotted #fff;
+  border-right: 1px dotted #fff;
+}
+.button {
+  -webkit-border-radius: 20;
+  -moz-border-radius: 20;
+  border-radius: 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background: #0e7f05;
+  padding: 5px 15px 5px 15px;
+  text-decoration: none;
+}
+.button:hover {
+  background: #0b4a06;
+  text-decoration: none;
+}
+.gamerules {
+  width: 900px;
+  text-align: left;
+}
+b {
+  color: white;
+}
+h1 {
+  color: #0b4a06;
+}
+::selection {
+  background: #575757;
+  color: #7bb047;
+}
+.blink_me {
+  -webkit-animation-name: blinker;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-name: blinker;
+  -moz-animation-duration: 1s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  animation-name: blinker;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@-moz-keyframes blinker {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+@-webkit-keyframes blinker {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+@keyframes blinker {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
