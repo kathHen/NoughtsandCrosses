@@ -1,7 +1,13 @@
 @background-color: #eaeaea ;
 
 body {
-  background-color: @background-color;
+  background: -webkit-linear-gradient(top,  #eaeaea 0%,#b8b8b8 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eaeaea), color-   stop(100%,#b8b8b8));
+  background: -moz-linear-gradient(top,  #eaeaea 0%, #b8b8b8 100%);
+  background: -o-linear-gradient(top,  #eaeaea 0%,#b8b8b8 100%);
+  background: -ms-linear-gradient(top,  #eaeaea 0%,#b8b8b8 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: #0e7f05;
   font-family: sans-serif;
 }
@@ -11,7 +17,7 @@ body {
 //}
 
 .mainContainer {
-  width: 900px;
+  width: 600px;
   margin: 0 auto;
   text-align: center;
 }
@@ -37,7 +43,7 @@ body {
 }
 .players1, .players2 {
   display: inline-block;
-  background: url('../images/xandos.png') no-repeat;
+  background: url('../images/alternativeicons.png') no-repeat;
   overflow: hidden;
 }
 
@@ -59,7 +65,7 @@ body {
 
 .Human, .Pre-trained, .Random {
   display: inline-block;
-  background: url('../images/greensprite.png') no-repeat;
+  background: url('../images/bandw.png') no-repeat;
 }
 
 .Human {
@@ -97,13 +103,13 @@ body {
 
 
 .rowBorder {
-  border-top: 1px dotted #fff;
-  border-bottom: 1px dotted #fff;
+  border-top: 1px dotted #7a7a7a;;
+  border-bottom: 1px dotted #7a7a7a;;
 }
 
 .colBorder {
-  border-left: 1px dotted #fff;
-  border-right: 1px dotted #fff;
+  border-left: 1px dotted #7a7a7a;;
+  border-right: 1px dotted #7a7a7a;;
 }
 
 .button {
@@ -128,7 +134,7 @@ body {
 }
 
 b {
-  color: white;
+  color: #7a7a7a;
 }
 
 h1 {

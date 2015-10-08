@@ -13,6 +13,17 @@
                     url: '/gameplay',
                     templateUrl: 'html/gameplay.html'
                 })
+
+                .state('gameplayInProgress.win',{
+                    url: '/win',
+                    templateUrl: 'html/winplayer.html'
+                })
+
+                .state('gameplayInProgress.draw', {
+                    url: '/draw',
+                    templateUrl: 'html/draw.html'
+                })
+
                 .state('gamerules', {
                     url: '/gamerules',
                     templateUrl: 'html/gamerules.html'
@@ -32,6 +43,8 @@
                     //controller: 'MainController',
                     templateUrl: 'html/winplayer2.html'
                 });
+
+
 
         });
 

@@ -4,17 +4,17 @@
         .service ('Endgame', ['$state', '$timeout', 'GameModel', function($state, $timeout, GameModel)  {
         var me = this;
 
-       var checkingEndGame = function () {
+        var checkingEndGame = function () {
                if (GameModel.gameState === 'Draw') {
-                   $state.go('drawgame');
+                   $state.go('gameplayInProgress.draw');
                }
                if (GameModel.gameState === 'Win') {
-                   $state.go('winner');
+                   $state.go('gameplayInProgress.win');
                }
            };
 
             me.checkingGamewithTime = function (){
-                $timeout(checkingEndGame, 4000);
+                $timeout(checkingEndGame, 500);
             };
 
     }]);
