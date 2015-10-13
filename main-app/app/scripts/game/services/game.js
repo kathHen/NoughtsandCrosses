@@ -10,6 +10,7 @@
             gameApiProxy.makeNewGame(characterSelection.player1, characterSelection.player2)
                 .then(function (response){
                     gameModel.startNewGame(response.gameboard, response.outcome, response.winner);
+                    endGame.checkingEndGame();
 
                 }).catch(function(response){
                     console.log("This is the error response: " + response);
