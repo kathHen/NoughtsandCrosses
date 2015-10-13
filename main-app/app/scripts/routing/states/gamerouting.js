@@ -30,22 +30,12 @@
                 })
                 .state('drawgame', {
                     url: '/draw',
-                    //controller: 'MainController',
                     templateUrl: 'html/draw.html'
                 })
                 .state('winner', {
                     url: '/winner',
-                    //controller: 'MainController',
                     templateUrl: 'html/winplayer.html'
-                })
-                .state('winner2', {
-                    url: '/winner2',
-                    //controller: 'MainController',
-                    templateUrl: 'html/winplayer2.html'
                 });
-
-
-
         });
 
 })();

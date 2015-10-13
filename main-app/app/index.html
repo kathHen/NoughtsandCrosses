@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html ng-app="Tombola.NoughtsandCrosses" ng-controller="MainController as main">
     <head>
-
         <link rel="stylesheet" type="text/css" href="{{ main.cssModel.stylePath }}">
-        <!--<link ng-hide="style" rel="stylesheet" type="text/css" href="css/alternative.less">-->
         <script src="thirdparty/bower_components/angular/angular.min.js"></script>
         <script src="thirdparty/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
         <title>Noughts and Crosses</title>
     </head>
     <body>
-
         <div class="mainContainer">
             <h1>Noughts and Crosses</h1>
             <state-html></state-html>
             <div ui-view></div>
-
             <img class="elephanticon" ng-click='main.cssModel.toggleCss()' src="images/elephanticon.png" />
-
         </div>
         <script src="scripts/app.js"></script>
-        <!--<link ng-click="activeButton()" ng-class="{'active': isActive}" rel="stylesheet" href="css/{{ stylePath }}" />-->
     </body>
 </html>

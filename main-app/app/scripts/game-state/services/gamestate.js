@@ -1,7 +1,8 @@
 (function(){
     'use strict';
     angular.module('Tombola.NoughtsandCrosses.GameState')
-        .service ('GameModel', ['$state', 'CharacterSelection',  function($state, characterSelection)  {
+        .service ('GameModel', ['$state', 'CharacterSelection',
+        function($state, characterSelection)  {
         var me = this;
 
         me.currentPlayer = 1;
@@ -34,8 +35,6 @@
                 me.currentPlayer = me.currentPlayer === 1 ? 2 : 1;
             }
         };
-
-
 
     }]);
 })();
