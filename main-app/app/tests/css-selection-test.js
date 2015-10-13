@@ -1,16 +1,17 @@
 (function () {
     'use strict';
     describe('Test game-constants', function () {
-        var constants;
+        var cssModel;
         beforeEach(function () {
             module('Tombola.NoughtsandCrosses.CssSelection');
-            inject(function ($injector) {
-                constants = $injector.get('CssModel');
+            inject(function (_CssModel_) {
+                cssModel = _CssModel_;
             });
         });
-        it('StylePath is equal to nextIndex', function () {
-            assert.equal('me.stylepath', constants[nextIndex]);
+        it('should have a rotateCssStyle function', function () {
+            should(angular.isFunction(cssModel.rotateCssStyle)).toBe(true);
         });
 
     });
+
 })();
