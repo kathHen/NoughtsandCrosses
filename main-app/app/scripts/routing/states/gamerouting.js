@@ -13,20 +13,28 @@
                     url: '/gameplay',
                     templateUrl: 'html/gameplay.html'
                 })
-                .state('gameplay', {
-                    url: '/gameplay',
-                    templateUrl: 'html/gameplay.html'
+
+                .state('gameplayInProgress.win',{
+                    url: '/win',
+                    templateUrl: 'html/winplayer.html'
                 })
-                .state('gameplay.gamestate', {
-                    url: '',
-                    templateUrl: 'gameplay.gamestate.html',
-                    controller: function($scope){
-                        $scope.GameState.GameModel();
-                    }
+
+                .state('gameplayInProgress.draw', {
+                    url: '/draw',
+                    templateUrl: 'html/draw.html'
                 })
+
                 .state('gamerules', {
                     url: '/gamerules',
                     templateUrl: 'html/gamerules.html'
+                })
+                .state('drawgame', {
+                    url: '/draw',
+                    templateUrl: 'html/draw.html'
+                })
+                .state('winner', {
+                    url: '/winner',
+                    templateUrl: 'html/winplayer.html'
                 });
         });
 

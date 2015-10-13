@@ -1,13 +1,17 @@
-@background-color: #242425 ;
+@background-color: black ;
 
 body {
   background-color: @background-color;
-  color: #1a90d9;
+  color: #b00b53;
   font-family: sans-serif;
 }
 
+//h1 {
+//  text-shadow: 2px 0.5px #EEEEEE;
+//}
+
 .mainContainer {
-  width: 600px;
+  width: 900px;
   margin: 0 auto;
   text-align: center;
 }
@@ -21,6 +25,7 @@ body {
 }
 
 .square {
+  //border:1px solid #FFF;
   padding-bottom: 30%;
 }
 
@@ -32,7 +37,7 @@ body {
 }
 .players1, .players2 {
   display: inline-block;
-  background: url('../images/xandos.png') no-repeat;
+  background: url('../images/alternativeicons.png') no-repeat;
   overflow: hidden;
 }
 
@@ -54,8 +59,8 @@ body {
 
 .Human, .Pre-trained, .Random {
   display: inline-block;
-  background: url('../images/playerselectorsprite.png') no-repeat;
-  }
+  background: url('../images/experiment.gif') no-repeat;
+}
 
 .Human {
   background-position: -0 -0;
@@ -75,14 +80,30 @@ body {
   height: 148px;
 }
 
+
+//.human {
+//  height: 148px;
+//  width: 148px;
+//  background-image: url('../images/player-selection-sprite.png');
+//  background-size: 444px 148px;
+//  background-position: 0 0;
+//  &.random{
+//    background-position: -148px 0;
+//  };
+//  &.pretrained{
+//    background-position: -296px 0;
+//  };
+//}
+
+
 .rowBorder {
-  border-top: 1px dotted #fff;
-  border-bottom: 1px dotted #fff;
+  border-top: 1px dotted #7a7a7a;;
+  border-bottom: 1px dotted #7a7a7a;;
 }
 
 .colBorder {
-  border-left: 1px dotted #fff;
-  border-right: 1px dotted #fff;
+  border-left: 1px dotted #7a7a7a;;
+  border-right: 1px dotted #7a7a7a;;
 }
 
 .button {
@@ -91,13 +112,13 @@ body {
   border-radius: 28px;
   color: #ffffff;
   font-size: 12px;
-  background: #1a90d9;
+  background: #0e7f05;
   padding: 5px 15px 5px 15px;
   text-decoration: none;
 }
 
 .button:hover {
-  background: #d31e1e;
+  background: #0b4a06;
   text-decoration: none;
 }
 
@@ -107,16 +128,16 @@ body {
 }
 
 b {
-  color: white;
+  color: #7a7a7a;
 }
 
 h1 {
-  color: #d31e1e;
+  color: #0b4a06;
 }
 
 ::selection {
-  background: #8dd3ff;
-  color: #a42c15;
+  background: #575757;
+  color: #7bb047;
 }
 
 .blink_me {
@@ -152,8 +173,4 @@ h1 {
   0% { opacity: 1.0; }
   50% { opacity: 0.0; }
   100% { opacity: 1.0; }
-}
-
-.elephanticon {
-
 }

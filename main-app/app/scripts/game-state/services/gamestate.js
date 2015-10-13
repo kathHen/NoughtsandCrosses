@@ -1,7 +1,8 @@
 (function(){
     'use strict';
     angular.module('Tombola.NoughtsandCrosses.GameState')
-        .service ('GameModel', ['CharacterSelection',  function(characterSelection)  {
+        .service ('GameModel', ['$state', 'CharacterSelection',
+        function($state, characterSelection)  {
         var me = this;
 
         me.currentPlayer = 1;
@@ -19,7 +20,6 @@
             me.currentPlayer = 1;
             if (characterSelection.player1 !== 'Human'){
                 me.currentPlayer = 2;
-
             }
             me.updateCurrentGameModel(gameboard, outcome, winner);
         };
@@ -35,7 +35,6 @@
                 me.currentPlayer = me.currentPlayer === 1 ? 2 : 1;
             }
         };
-
 
     }]);
 })();
