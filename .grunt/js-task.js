@@ -7,6 +7,9 @@
         checkGruntJS: {
             src: '.grunt/**/*.js'
         },
+        checkKarma: {
+            src: 'main-app/app/tests/**/*.js'
+        },
         concatJS: {
             cwd: '',
             src: 'main-app/app/scripts/script.js',
