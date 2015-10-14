@@ -9,11 +9,9 @@
                 };
                 $scope.newGameMaker = function(){
                     game.startNewGame();
-                    //endgame.checkingGamewithTime();
                 };
                 $scope.makingMoves = function(gridNumber){
                     game.makingMoves(gridNumber);
-                    //endgame.checkingGamewithTime();
                 };
                 this.gameModel = gameModel;
                 this.cssModel = cssModel;

@@ -9,7 +9,7 @@
             });
         });
         it('StylePath is equal to nextIndex', function () {
-            assert.equal('me.stylepath', constants[nextIndex]);
+            should.equal('me.stylepath', constants[nextIndex]);
         });
 
     });
