@@ -10,11 +10,11 @@
             });
         });
         it('Ensure css type 0 is main.css', function () {
-            should.equal('css/main.css', constants[0]);
+            constants[0].should.equal('css/main.css');
         });
 
         it('Ensure player type 1 is alternative', function() {
-            should.equal('css/alternative.css', constants[1]);
+            constants[1].should.equal('css/alternative.css');
         });
 
     });
