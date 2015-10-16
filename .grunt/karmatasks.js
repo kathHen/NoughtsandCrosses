@@ -12,12 +12,13 @@
                     'main-app/app/scripts/controllers/main-controller.js',
                     'main-app/app/scripts/player-selection/**/*.js',
                     'main-app/app/scripts/css/**/*.js',
+                    'main-app/app/scripts/controllers/main-controller.js',
                     'main-app/app/scripts/core/**/*.js',
                     'main-app/app/scripts/game/**/*.js',
                     'main-app/app/scripts/game-state/**/*.js',
                     'main-app/app/scripts/routing/**/*.js',
                     'main-app/app/mocks/*.js',
-                    'main-app/app/tests/**/*.js'
+                    'main-app/app/tests/*.js'
                 ]
             }
         }
