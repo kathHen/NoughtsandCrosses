@@ -18,7 +18,7 @@
                     'main-app/app/scripts/game-state/**/*.js',
                     'main-app/app/scripts/routing/**/*.js',
                     'main-app/app/mocks/*.js',
-                    'main-app/app/tests/*.js'
+                    'main-app/app/tests/**/*.js'
                 ]
             }
         }

@@ -1,7 +1,7 @@
 'use strict';
 var mocks = {
     cssModelSelection: {
-        rotateCssStyle: function(){},
+        //rotateCssStyle: function(){},
         toggleCss: function(){},
         stylePath: 'css/main.css'
     },
