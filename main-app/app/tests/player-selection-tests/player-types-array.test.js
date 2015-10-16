@@ -18,7 +18,7 @@
         });
 
         it('Ensure player type 2 is pre-trained', function() {
-            constants[2].should.equal('Pre-Trained');
+            constants[2].should.equal('Pre-trained');
         });
 
     });

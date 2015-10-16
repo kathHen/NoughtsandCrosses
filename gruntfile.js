@@ -6,7 +6,7 @@
         jsConcat = require('./.grunt/js-concat'),
         jsClean = require('./.grunt/js-clean'),
         jsWatch = require('./.grunt/js-watch'),
-        karmaTask = require('./.grunt/karmatasks.js')
+        karmaTask = require('./.grunt/karmatasks.js');
 
     module.exports = function (grunt) {
         grunt.initConfig({
@@ -38,11 +38,10 @@
             grunt.log.writeln('Listening on port ' + port);
         });
 
-        grunt.registerTask('test', ['karma']);
+        grunt.registerTask('test', ['jshint:checkKarma', 'jshint:checkMainJS', 'karma', 'watch:karmaWatch']);
         grunt.registerTask('lessFiles', ['lesslint', 'clean:css', 'less']);
         grunt.registerTask('jsFiles', ['jshint', 'clean:javascript', 'concat']);
         grunt.registerTask('htmlFiles', ['clean:html', 'copy:html']);
         grunt.registerTask('default', ['copy', 'lessFiles', 'jsFiles', 'server', 'watch']);
-
     }
 })();

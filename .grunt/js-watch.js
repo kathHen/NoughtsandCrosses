@@ -12,6 +12,10 @@
         htmlWatch: {
             files: ['main-app/app/index.html', 'main-app/app/html/**/*.html'],
             tasks: ['htmlFiles']
+        },
+        karmaWatch: {
+            files: ['karma.conf.js', 'main-app/app/tests/**/*.js'],
+            tasks: ['karma']
         }
     };
 })();
