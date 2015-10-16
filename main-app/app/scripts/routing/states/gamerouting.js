@@ -2,11 +2,11 @@
     'use strict';
     angular.module('Tombola.NoughtsandCrosses')
         .config(function($stateProvider, $urlRouterProvider){
-            var resetGame = function($timeout, $state){
-                $timeout(function(){
-                    $state.go('playerselection');
-                }, 3000);
-            };
+           var resetGame = function($timeout, $state){
+               $timeout(function(){
+                   $state.go('playerselection');
+               }, 3000);
+           };
             $urlRouterProvider.otherwise("/playerselect");
             $stateProvider
                 .state('playerselection', {
@@ -22,7 +22,7 @@
                     url: '/win',
                     templateUrl: 'html/winplayer.html',
                     onEnter:function($timeout, $state){
-                        resetGame($timeout, $state);
+                       resetGame($timeout, $state);
                     }
                 })
                 .state('gameplayInProgress.draw', {
