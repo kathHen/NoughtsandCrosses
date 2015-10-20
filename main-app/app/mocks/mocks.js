@@ -12,8 +12,10 @@ var mocks = {
         player2: 'Human'
     },
 
+    cssArray:
+        ['css/main.css', 'css/alternative.css'],
     playerTypes:
-       ['Human', 'Random', 'Pre-Trained'],
+        ['Human', 'Random', 'Pre-Trained'],
 
     GameModelFunctions: {
         updateCurrentGameModel: function(){},
@@ -23,6 +25,13 @@ var mocks = {
     },
     endofGame: {
         $state: function(){},
-        endofGame: function(){}
+        endofGame: function(){},
+        GameModel: function(){}
+    },
+    fakeState: {
+        go: function(){}
+    },
+    gameModel: {
+      gameState: 'Draw'
     }
 };
