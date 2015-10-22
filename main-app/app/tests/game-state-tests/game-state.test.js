@@ -21,9 +21,7 @@
             sandbox = sinon.sandbox.create();
             spyonState = sinon.sandbox.spy(mocks.fakeState, 'go');
             GameModelFunctions = sinon.sandbox.mock(mocks.GameModelFunctions);
-            module(function($injector){
 
-            });
         });
 
         it('gameboard should respond with 000000000 gameboard', function(){

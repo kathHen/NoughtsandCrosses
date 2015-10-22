@@ -6,7 +6,6 @@ var mocks = {
         stylePath: 'css/main.css'
     },
     characterSelection: {
-        rotatePlayerType: function(){},
         togglePlayer: function(){},
         player1: 'Pre-trained',
         player2: 'Human'
@@ -33,5 +32,11 @@ var mocks = {
     },
     gameModel: {
       gameState: 'Draw'
+    },
+
+    game: {
+        startNewGame: function(){},
+        makingMoves: function(){},
+        humangameplay: function(){}
     }
 };
