@@ -1,12 +1,10 @@
 'use strict';
 var mocks = {
     cssModelSelection: {
-        //rotateCssStyle: function(){},
         toggleCss: function(){},
         stylePath: 'css/main.css'
     },
     characterSelection: {
-        rotatePlayerType: function(){},
         togglePlayer: function(){},
         player1: 'Pre-trained',
         player2: 'Human'
@@ -28,10 +26,16 @@ var mocks = {
         endofGame: function(){},
         GameModel: function(){}
     },
+    gameRouting: {
+        $state: function(){},
+        $timeout: function(){},
+        resetGame: function(){}
+    },
     fakeState: {
         go: function(){}
     },
     gameModel: {
       gameState: 'Draw'
     }
+
 };
