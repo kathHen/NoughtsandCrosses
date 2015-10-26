@@ -1,7 +1,6 @@
 'use strict';
 var mocks = {
     cssModelSelection: {
-        //rotateCssStyle: function(){},
         toggleCss: function(){},
         stylePath: 'css/main.css'
     },
@@ -10,7 +9,16 @@ var mocks = {
         player1: 'Pre-trained',
         player2: 'Human'
     },
-
+    game: {
+        makingMoves: function(){},
+        startNewGame: function(){},
+        humangameplay: function(){}
+    },
+    //mainController: {
+    //    makingMoves: function(gridNumber){},
+    //    startNewGame: function(){},
+    //    humangameplay: function(gridNumberIndex){}
+    //},
     cssArray:
         ['css/main.css', 'css/alternative.css'],
     playerTypes:
@@ -27,16 +35,16 @@ var mocks = {
         endofGame: function(){},
         GameModel: function(){}
     },
+    gameRouting: {
+        $state: function(){},
+        $timeout: function(){},
+        resetGame: function(){}
+    },
     fakeState: {
         go: function(){}
     },
     gameModel: {
-      gameState: 'Draw'
-    },
-
-    game: {
-        startNewGame: function(){},
-        makingMoves: function(){},
-        humangameplay: function(){}
+        gameState: 'Draw'
     }
+
 };

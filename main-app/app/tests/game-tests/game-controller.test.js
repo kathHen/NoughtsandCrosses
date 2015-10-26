@@ -19,6 +19,5 @@
         it('Controllersets the scope to the passed game service', function(){
             $scope.game.should.equal(mocks.game);
         });
-
     });
 })();
