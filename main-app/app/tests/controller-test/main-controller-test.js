@@ -25,17 +25,17 @@
 
         it('Makingmoves should have been called at least once', function(){
             $scope.makingMoves();
-            makingMovesSpy.should.have.been.calledOnce;
+            makingMovesSpy.should.have.been.calledOnce; /*jshint ignore:line*/
         });
 
         it('Humangameplay should have been called at least once', function(){
             $scope.humangameplay();
-            humangameplaySpy.should.have.been.calledOnce;
+            humangameplaySpy.should.have.been.calledOnce;/*jshint ignore:line*/
         });
 
         it('StartNewGame should have been called at least once', function(){
             $scope.newGameMaker();
-            newGameMakerSpy.should.have.been.calledOnce;
+            newGameMakerSpy.should.have.been.calledOnce;/*jshint ignore:line*/
         });
 
         afterEach(function(){
