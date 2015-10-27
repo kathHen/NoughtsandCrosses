@@ -36,6 +36,12 @@ var mocks = {
     },
     gameModel: {
       gameState: 'Draw'
+    },
+
+    game: {
+        startNewGame: function(){},
+        makingMoves: function(){},
+        humangameplay: function(){}
     }
 
 };

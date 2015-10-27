@@ -12,39 +12,32 @@
                 .state('playerselection', {
                     url: '/playerselect',
                     controller: 'MainController',
-                    templateProvider: function($templateCache){
-                        return $templateCache.get('html/playerselect.html');
-                    }
+                    templateUrl: 'html/playerselect.html'
                 })
                 .state('gameplayInProgress', {
                     url: '/gameplay',
-                    templateProvider: function($templateCache){
-                        return $templateCache.get('html/gameplay.html');
-                    }
+                    //templateUrl: 'html/gameplay.html',
+                    template: '<game-board></game-board>'
                 })
                 .state('gameplayInProgress.win',{
                     url: '/win',
-                    templateProvider: function($templateCache){
-                        return $templateCache.get('html/winplayer.html');
-                    },
+                    //templateUrl: 'html/winplayer.html',
+                    template: '<h1 class="blink_me">PLAYER {{main.gameModel.outcome}} WINS</h1>',
                     onEnter:function($timeout, $state){
                        resetGame($timeout, $state);
                     }
                 })
                 .state('gameplayInProgress.draw', {
                     url: '/draw',
-                    templateProvider: function($templateCache){
-                        return $templateCache.get('html/draw.html');
-                    },
+                    //templateUrl: 'html/draw.html',
+                    template: '<h1 class="blink_me">DRAW!</h1>',
                     onEnter:function($timeout, $state){
                         resetGame($timeout, $state);
                     }
                 })
                 .state('gamerules', {
                     url: '/gamerules',
-                    templateProvider: function($templateCache){
-                        return $templateCache.get('html/gamerules.html');
-                    }
+                    templateUrl: 'html/gamerules.html'
                 });
         });
 })();
