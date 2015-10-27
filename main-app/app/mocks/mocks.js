@@ -14,6 +14,11 @@ var mocks = {
         startNewGame: function(){},
         humangameplay: function(){}
     },
+    //mainController: {
+    //    makingMoves: function(gridNumber){},
+    //    startNewGame: function(){},
+    //    humangameplay: function(gridNumberIndex){}
+    //},
     cssArray:
         ['css/main.css', 'css/alternative.css'],
     playerTypes:
