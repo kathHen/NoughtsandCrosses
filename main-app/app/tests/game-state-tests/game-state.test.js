@@ -2,7 +2,7 @@
     'use strict';
     describe('Game State checking test', function () {
         var constants,
-            gameModelFunctions,
+            GameModelFunctions,
             state,
             gameModel,
             spyonState,
@@ -18,10 +18,9 @@
                 $provide.value('CharacterSelection', mocks.characterSelection);
                 $provide.value('$state', mocks.fakeState);
             });
-            //Pretty sure I'm gonna intend to use these at a later point, if not remove
             sandbox = sinon.sandbox.create();
             spyonState = sinon.sandbox.spy(mocks.fakeState, 'go');
-            gameModelFunctions = sinon.sandbox.mock(mocks.GameModelFunctions);
+            GameModelFunctions = sinon.sandbox.mock(mocks.GameModelFunctions);
 
         });
 
@@ -51,6 +50,7 @@
 
 
         afterEach(function(){
+            //$interval.flush;
             sandbox.restore();
         });
 
