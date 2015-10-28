@@ -39,7 +39,7 @@
         });
 
         afterEach(function(){
-           sandbox.restore();
+            sandbox.restore();
         });
     });
 })();
