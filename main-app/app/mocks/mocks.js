@@ -9,7 +9,11 @@ var mocks = {
         player1: 'Pre-trained',
         player2: 'Human'
     },
-
+    game: {
+        makingMoves: function(){},
+        startNewGame: function(){},
+        humangameplay: function(){}
+    },
     cssArray:
         ['css/main.css', 'css/alternative.css'],
     playerTypes:
@@ -35,13 +39,6 @@ var mocks = {
         go: function(){}
     },
     gameModel: {
-      gameState: 'Draw'
-    },
-
-    game: {
-        startNewGame: function(){},
-        makingMoves: function(){},
-        humangameplay: function(){}
+        gameState: 'Draw'
     }
-
 };
