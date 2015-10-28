@@ -41,5 +41,4 @@ var mocks = {
     gameModel: {
         gameState: 'Draw'
     }
-
 };
