@@ -57,17 +57,5 @@
             insideElement.className.should.be.equal('square rowBorder');
         });
 
-        //it('Replaces the element with the appropriate content from the child of four divs in', function(){
-        //    $rootScope.gameBoard = {humangameplay: 0};
-        //    var element = $compile(directiveElement)($rootScope);
-        //    $rootScope.$digest();
-        //
-        //    var insideElement = element[1];
-        //
-        //    //insideElement.className.should.be.equal('button');
-        //
-        //    insideElement.attr('class').should.equal('button');
-        //});
-
     });
 })();

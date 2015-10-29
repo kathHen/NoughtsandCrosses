@@ -30,7 +30,6 @@
         };
 
         me.currentPlayerLogic = function(){
-
             if (characterSelection.player1 === "Human" && characterSelection.player2 === "Human"){
                 me.currentPlayer = me.currentPlayer === 1 ? 2 : 1;
             }

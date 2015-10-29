@@ -18,6 +18,9 @@
                 $provide.value('CharacterSelection', mocks.characterSelection);
                 $provide.value('$state', mocks.fakeState);
             });
+            //inject(function ($injector){
+            //   constants = $injector.get('gameModel');
+            //});
             //Pretty sure I'm gonna intend to use these at a later point, if not remove
             sandbox = sinon.sandbox.create();
             spyonState = sinon.sandbox.spy(mocks.fakeState, 'go');
