@@ -18,6 +18,7 @@
                 $provide.value('CharacterSelection', mocks.characterSelection);
                 $provide.value('$state', mocks.fakeState);
             });
+
             //Pretty sure I'm gonna intend to use these at a later point, if not remove
             sandbox = sinon.sandbox.create();
             spyonState = sinon.sandbox.spy(mocks.fakeState, 'go');
@@ -42,6 +43,7 @@
         });
 
         it('characterSelection for player1 should be Pre-trained', function(){
+
             mocks.characterSelection.player1.should.equal('Pre-trained');
         });
 

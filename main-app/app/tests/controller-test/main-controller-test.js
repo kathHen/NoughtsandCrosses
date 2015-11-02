@@ -23,19 +23,19 @@
             });
         });
 
-        it('Makingmoves should have been called at least once', function(){
+        it('MakingMoves should have been called at least once', function(){
             $scope.makingMoves();
-            makingMovesSpy.should.have.been.calledOnce; /*jshint ignore:line*/
+            makingMovesSpy.should.have.been.calledOnce;
         });
 
         it('Humangameplay should have been called at least once', function(){
             $scope.humangameplay();
-            humangameplaySpy.should.have.been.calledOnce;/*jshint ignore:line*/
+            humangameplaySpy.should.have.been.calledOnce;
         });
 
         it('StartNewGame should have been called at least once', function(){
             $scope.newGameMaker();
-            newGameMakerSpy.should.have.been.calledOnce;/*jshint ignore:line*/
+            newGameMakerSpy.should.have.been.calledOnce;
         });
 
         afterEach(function(){

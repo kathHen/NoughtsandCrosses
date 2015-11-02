@@ -12,7 +12,7 @@ var mocks = {
     game: {
         makingMoves: function(){},
         startNewGame: function(){},
-        humangameplay: function(){}
+        humangameplay: function(gridNumberIndex){}
     },
     cssArray:
         ['css/main.css', 'css/alternative.css'],
@@ -40,5 +40,8 @@ var mocks = {
     },
     gameModel: {
         gameState: 'Draw'
+    },
+    gameApiProxy: {
+        gameModel: function (){}
     }
 };

@@ -27,13 +27,8 @@
             });
 
         };
-
         me.humangameplay = function(gridNumberIndex){
-            //if (GameModel.gameboard.charAt(gridNumberIndex) != '0' || GameModel.gameState === "Win") {
-            //    return;
-            //}
             me.makingMoves(gridNumberIndex);
-            endGame.checkingEndGame();
         };
     }]);
 })();
