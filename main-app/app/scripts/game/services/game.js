@@ -32,7 +32,7 @@
             //    return;
             //}
             me.makingMoves(gridNumberIndex);
-            endGame.checkingEndGame();
+            //endGame.checkingEndGame();
         };
     }]);
 })();
